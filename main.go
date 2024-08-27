@@ -11,6 +11,7 @@ import (
 func main() {
 	if len(os.Args) != 2{
 		mathskills.ErrorHandler("Please enter a single file.")
+		return
 	}
 	 file := os.Args[1]
 	d, err := os.ReadFile(file)
