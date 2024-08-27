@@ -20,14 +20,18 @@ func main() {
 		mathskills.ErrorHandler("Try a valid file!")
 		return
 	}
-
+	if len(d) == 0{
+		mathskills.ErrorHandler("error")
+		return
+	}
 	data := (mathskills.Format(d))
 	average := mathskills.Average(data)
 	median := mathskills.Median(data)
 	variance := mathskills.Variance(data)
 	std := mathskills.Std(data)
-	fmt.Println("Average: ", math.Round(average))
-	fmt.Println("Median: ", math.Round(median))
-	fmt.Println("Variance: ", math.Round(variance))
-	fmt.Println("Standard Deviation: ", math.Round(std))
+	fmt.Println("Average: ", int(math.Round(average)))
+	fmt.Println("Median: ", int(math.Round(median)))
+	fmt.Println("Variance: ", int(math.Round(variance)))
+	fmt.Println("Standard Deviation: ", int(math.Round(std)))
+	fmt.Println("Standard Deviation: ", int(math.Round(2542542542542542)))
 }
